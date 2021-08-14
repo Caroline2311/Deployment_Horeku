@@ -2,14 +2,8 @@ from flask import Flask , render_template,request
 import joblib
 app=Flask(__name__)
 model=joblib.load('diabetic_79.sav')
-#@app.route('/')
-#def hello():
-   # return render_template('landing.html')
+@app.route('/')
 
-#@app.route('/contact')
-#def contact():
- #   return render_template('contact.html')
-@app.route('/diabetic')
 def diabetic():
     return render_template('diabetic.html')
 
